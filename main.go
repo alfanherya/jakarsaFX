@@ -12,10 +12,10 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8090"
+		port = "8080"
 	}
 
 	r := router.Router()
-	fmt.Println("Starting server on the port 8090 ............")
+	fmt.Println("Starting server on the port 8080 ............")
 	log.Fatal(http.ListenAndServe(":"+port, r))
 }
